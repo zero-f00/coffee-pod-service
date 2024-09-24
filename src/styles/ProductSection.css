@@ -1,0 +1,42 @@
+/* src/styles/ProductSection.css */
+
+/* 基本スタイル（モバイルファースト） */
+.product-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* タブレット以上の画面での調整 */
+@media (min-width: 768px) {
+    .products {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .product {
+        flex-basis: 45%;
+    }
+}
+
+/* デスクトップ以上の画面での調整 */
+@media (min-width: 1024px) {
+    .product {
+        flex-basis: 30%;
+    }
+}

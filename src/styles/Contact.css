@@ -1,0 +1,86 @@
+/* お問い合わせページのスタイル */
+.contact-page {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-page h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-page p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* お問い合わせフォームのスタイル */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #b35916;
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+    .contact-page {
+        padding: 40px;
+    }
+
+    .contact-page h1 {
+        font-size: 28px;
+    }
+
+    .contact-page p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-page {
+        padding: 60px;
+    }
+
+    .contact-page h1 {
+        font-size: 32px;
+    }
+
+    .contact-page p {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,59 @@
+/* src/styles/FAQ.css */
+
+.faq-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.faq-item h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* タブレット以上の画面 */
+@media (min-width: 768px) {
+    .faq-page {
+        padding: 40px;
+    }
+
+    .faq-item {
+        padding: 25px;
+    }
+
+    .faq-item h2 {
+        font-size: 24px;
+    }
+
+    .faq-item p {
+        font-size: 18px;
+    }
+}
+
+/* デスクトップサイズ */
+@media (min-width: 1024px) {
+    .faq-page {
+        padding: 60px;
+    }
+
+    .faq-item h2 {
+        font-size: 28px;
+    }
+
+    .faq-item p {
+        font-size: 20px;
+    }
+}

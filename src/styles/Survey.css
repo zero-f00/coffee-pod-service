@@ -1,0 +1,48 @@
+/* src/styles/Survey.css */
+
+.survey-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.survey-page h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.survey-page p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* タブレット以上の画面 */
+@media (min-width: 768px) {
+    .survey-page {
+        padding: 40px;
+    }
+
+    .survey-page h1 {
+        font-size: 28px;
+    }
+
+    .survey-page p {
+        font-size: 18px;
+    }
+}
+
+/* デスクトップサイズ */
+@media (min-width: 1024px) {
+    .survey-page {
+        padding: 60px;
+    }
+
+    .survey-page h1 {
+        font-size: 32px;
+    }
+
+    .survey-page p {
+        font-size: 20px;
+    }
+}

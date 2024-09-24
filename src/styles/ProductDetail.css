@@ -1,0 +1,132 @@
+.product-detail {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+}
+
+.back-button {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.product-detail h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-detail p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.blend-description {
+    background-color: #f1f1f1;
+    border-left: 4px solid #d2691e;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.flavor-profile {
+    margin: 30px 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.plan-cards {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    justify-content: space-around;
+}
+
+.plan-card {
+    background-color: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 45%;
+    box-sizing: border-box;
+    /* Ensure padding and borders are included in the width */
+}
+
+.plan-card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #d2691e;
+}
+
+.plan-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.order-button {
+    background-color: #d2691e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.order-button:hover {
+    background-color: #b85a1c;
+}
+
+/* スマホ向けの調整 */
+@media (max-width: 768px) {
+    .product-detail {
+        padding: 20px;
+    }
+
+    .plan-cards {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .plan-card {
+        width: 100%;
+        /* Full width for mobile devices */
+        max-width: 400px;
+        /* Set a max width to avoid overly large cards */
+    }
+
+    .back-button {
+        top: 70px;
+        left: 10px;
+        font-size: 20px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,48 @@
+.about-page {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about-page h1,
+.about-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .about-page {
+        padding: 40px;
+    }
+
+    .about-page h1,
+    .about-page h2 {
+        font-size: 28px;
+    }
+
+    .about-page p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-page {
+        padding: 60px;
+    }
+
+    .about-page h1,
+    .about-page h2 {
+        font-size: 32px;
+    }
+
+    .about-page p {
+        font-size: 20px;
+    }
+}

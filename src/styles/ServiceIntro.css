@@ -1,0 +1,108 @@
+/* サービス紹介セクション */
+.service-intro {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* サービスコンテンツのスタイル */
+.service-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* テキスト部分のスタイル */
+.intro-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* カードのリストのスタイル */
+.service-features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 各カードのスタイル */
+.service-features li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #666;
+    box-sizing: border-box;
+}
+
+/* アイコンのスタイル */
+.service-features li i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #d2691e;
+}
+
+/* カードのホバーアニメーション */
+.service-features li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-content p {
+    text-align: left;
+    /* テキストを左揃えにする */
+    margin: 0;
+    /* 余白を調整 */
+    line-height: 1.6;
+    /* 読みやすさのために行間を設定 */
+    color: #333;
+    /* テキストの色を少し濃く */
+}
+
+/* レスポンシブ対応 */
+/* PC表示 (1024px以上は4列表示) */
+@media (min-width: 1024px) {
+    .service-features li {
+        flex: 1 1 calc(25% - 20px);
+        /* 4列表示 */
+        max-width: calc(25% - 20px);
+    }
+}
+
+/* 830px ~ 1024px未満は2列表示 */
+@media (min-width: 830px) and (max-width: 1024px) {
+    .service-features li {
+        flex: 1 1 calc(50% - 20px);
+        /* 2列表示 */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* タブレットサイズ (768px ~ 830pxは2列表示) */
+@media (min-width: 768px) and (max-width: 830px) {
+    .service-features li {
+        flex: 1 1 calc(50% - 20px);
+        /* 2列表示 */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* スマホサイズ (768px以下は1列表示) */
+@media (max-width: 768px) {
+    .service-features li {
+        flex: 1 1 100%;
+        /* スマホでは1列表示 */
+        max-width: 100%;
+    }
+}

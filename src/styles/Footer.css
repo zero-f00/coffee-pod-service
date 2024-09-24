@@ -1,0 +1,24 @@
+/* src/styles/Footer.css */
+
+/* 基本スタイル（モバイルファースト） */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+    border-top: 1px solid #eaeaea;
+}
+
+/* タブレット以上の画面での調整 */
+@media (min-width: 768px) {
+    .footer {
+        padding: 30px;
+    }
+}
+
+/* デスクトップ以上の画面での調整 */
+@media (min-width: 1024px) {
+    .footer {
+        padding: 40px;
+    }
+}

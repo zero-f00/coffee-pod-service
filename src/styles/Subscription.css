@@ -1,0 +1,97 @@
+.subscription-page {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.subscription-page h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.subscription-page p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* プランオプションをカードとして表示 */
+.plan-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2列に変更 */
+    gap: 20px;
+}
+
+.plan-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    text-align: center;
+}
+
+.plan-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.plan-option.selected {
+    background-color: #d2691e;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plan-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.plan-details p {
+    font-size: 18px;
+    color: inherit;
+}
+
+/* ラジオボタンをカスタマイズ */
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.subscribe-button {
+    background-color: #d2691e;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.subscribe-button:hover {
+    background-color: #b85a1c;
+}
+
+@media (max-width: 768px) {
+    .plan-options {
+        grid-template-columns: 1fr;
+        /* モバイルでは1列に */
+    }
+}

@@ -1,0 +1,568 @@
+/* ===========================
+   注文画面全体のレイアウト
+=========================== */
+.order-container {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: left;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 160px);
+}
+
+/* ===========================
+   戻るボタン
+=========================== */
+.back-button {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   商品スライドボタン
+=========================== */
+.product-slide {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product-button {
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: #b85a1c;
+}
+
+.product-button.active {
+    background-color: #4CAF50;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   注文サマリーセクション
+=========================== */
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.order-summary-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.order-summary-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.order-summary-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+/* ===========================
+   数量選択セクション
+=========================== */
+.quantity-group {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.quantity-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantity-box label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.quantity-slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.quantity-display {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* スライダーのスタイル */
+.quantity-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.quantity-slider:hover {
+    opacity: 1;
+}
+
+.quantity-slider::-webkit-slider-thumb,
+.quantity-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.quantity-slider::-webkit-slider-runnable-track,
+.quantity-slider::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #ff5722;
+    border-radius: 5px;
+}
+
+/* ===========================
+   配達回数セクション
+=========================== */
+.delivery-times {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delivery-times-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.delivery-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.delivery-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #d2691e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delivery-button:hover {
+    background-color: #b85a1c;
+}
+
+.delivery-button.active {
+    background-color: #4CAF50;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   注文ボタン
+=========================== */
+.order-button {
+    background-color: #d2691e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.order-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.order-button:hover {
+    background-color: #b85a1c;
+}
+
+/* ===========================
+   カートサマリーセクション
+=========================== */
+.cart-summary {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.cart-summary h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   カートアイテムセクション
+=========================== */
+.cart-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.cart-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-header h4 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.cart-item-details p {
+    font-size: 16px;
+    color: #666;
+}
+
+.cart-item-price {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #e60000;
+}
+
+/* ===========================
+   プラン選択セクション
+=========================== */
+.plan-selection {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.plan-card,
+.enhanced-plan-card {
+    display: flex;
+    align-items: center;
+    background-color: #f0f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    border-left: 6px solid #4CAF50;
+    margin-bottom: 20px;
+}
+
+.plan-info {
+    text-align: left;
+    flex: 1;
+}
+
+.plan-select-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.plan-info h4 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.plan-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.plan-icon {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-right: 20px;
+}
+
+.plan-button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #d2691e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan-button:hover {
+    background-color: #b85a1c;
+}
+
+.plan-button.active {
+    background-color: #4CAF50;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   ダイアログのスタイル
+=========================== */
+.dialog-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dialog-card:hover {
+    transform: translateY(-5px);
+}
+
+.dialog-card-header {
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+}
+
+.dialog-card-header h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.dialog-card-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.dialog-card-quantity {
+    font-size: 18px;
+    color: #666;
+}
+
+.dialog-card-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #d32f2f;
+}
+
+/* ===========================
+   注文確定ボタン
+=========================== */
+.confirm-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.confirm-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ===========================
+   メディアクエリ: スマホ用スタイル
+=========================== */
+@media (max-width: 768px) {
+    .order-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .back-button {
+        top: 70px;
+        left: 10px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .order-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-summary-item {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .quantity-group {
+        flex-direction: column;
+    }
+
+    .quantity-box {
+        margin-bottom: 20px;
+    }
+
+    .product-slide {
+        flex-direction: column;
+    }
+
+    .product-slide button {
+        margin-bottom: 10px;
+    }
+
+    .cart-summary {
+        padding: 15px;
+    }
+
+    .cart-summary h3 {
+        font-size: 20px;
+    }
+
+    .cart-summary div p {
+        font-size: 14px;
+    }
+
+    .dialog-cart-item {
+        padding: 8px;
+    }
+
+    .dialog-cart-item p {
+        font-size: 14px;
+    }
+
+    /* スマホサイズのプラン選択セクション */
+    .plan-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .plan-info h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .plan-info p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .plan-select-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .plan-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .delivery-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .delivery-button {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,219 @@
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    background-image: url('../assets/hero-desktop.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.login-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.login-content {
+    text-align: center;
+    /* コンテンツ全体を上下左右中央揃え */
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    /* 上下左右中央寄せ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 中央揃え */
+    height: auto;
+    /* 自然な高さに調整 */
+}
+
+.login-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.login-description {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    /* コンテナの幅を100%にする */
+    max-width: none;
+    /* デスクトップでの制限を解除 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.login-description br {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.google-login-btn {
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 16px;
+    /* パディングを少し減らして幅を調整 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    width: auto;
+    /* テキストに合わせた自然な幅 */
+}
+
+.google-login-btn img.google-icon {
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+}
+
+.google-login-btn:hover {
+    background-color: #357ae8;
+    /* ホバー時にわずかに灰色にする */
+    transform: scale(1.05);
+    /* ホバー時に少し拡大 */
+}
+
+.google-login-btn span {
+    color: white;
+    /* ホバー時も文字は白のまま */
+}
+
+/* 切り替えボタンのスタイル */
+.switch-auth-btn {
+    background: rgba(255, 255, 255, 0.7);
+    /* 透明な白背景を追加 */
+    color: #4285F4;
+    /* テキストは青のまま */
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    padding: 5px 10px;
+    /* 少し余白を追加 */
+    border-radius: 5px;
+    /* 角を丸めて少しスタイリッシュに */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ホバー時のスタイル */
+.switch-auth-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    /* 背景を少し濃くしてアクティブ感を出す */
+    color: #357ae8;
+    /* ホバー時に少し濃い青に変更 */
+}
+
+/* 「アカウントをお持ちでないですか？」のテキストスタイル */
+.toggle-auth-option p {
+    color: #ffffff;
+    /* 白色に設定して背景に対して視認性を高める */
+    font-size: 14px;
+}
+
+/* アカウント作成リンクのスタイル */
+.switch-auth-btn {
+    background: none;
+    border: none;
+    color: #4285F4;
+    /* Googleの青に設定 */
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.switch-auth-btn:hover {
+    color: #357ae8;
+    /* ホバー時に少し濃い青に */
+}
+
+.switch-auth-btn:hover {
+    color: #357ae8;
+}
+
+.toggle-auth-option {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.error-message {
+    color: #ff4d4f;
+    /* 明るい赤で視認性を高める */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* 透明の白背景を追加 */
+    padding: 10px;
+    /* エラーメッセージにパディングを追加 */
+    margin-top: 20px;
+    font-size: 16px;
+    /* 少し大きめのフォントにする */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    /* 角を丸めてスタイルを整える */
+    border: 1px solid #ff4d4f;
+    /* 赤い枠線を追加して強調 */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* わずかな影を追加して浮き上がらせる */
+}
+
+/* レスポンシブデザイン */
+/* PCとタブレットサイズでは1行にする */
+@media (min-width: 769px) {
+    .login-description {
+        white-space: nowrap;
+        /* 折り返さない */
+        width: 100%;
+        /* 幅を最大に広げる */
+        max-width: none;
+        /* PCとタブレットで幅制限を解除 */
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-title {
+        font-size: 32px;
+    }
+
+    .google-login-btn {
+        font-size: 12px;
+        /* モバイル用のフォントサイズ調整 */
+        padding: 8px 16px;
+    }
+
+    .login-content {
+        max-width: 90%;
+    }
+
+    .login-description {
+        font-size: 16px;
+        max-width: 90%;
+        /* スマホでは90%の幅に */
+        white-space: normal;
+        /* スマホでは折り返しを許可 */
+        padding: 0;
+    }
+}
